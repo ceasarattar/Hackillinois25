@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "solana.unity.anchor.tool": {
+      "version": "0.2.17",
+      "commands": [
+        "dotnet-anchorgen"
+      ]
+    }
+  }
+}
