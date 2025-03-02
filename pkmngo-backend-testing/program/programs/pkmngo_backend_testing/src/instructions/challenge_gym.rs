@@ -9,6 +9,8 @@ pub fn challenge_gym(mut ctx: Context<ChallengeGym>, counter: u16) -> Result<()>
 
     account.player.last_id = counter;
 
+    msg!("gym boss is {}", account.game_data.poke_gym.gym_boss);
+
     msg!("your combat level is {}", account.player.combat_lvl);
     msg!("gym boss power is {}", account.game_data.poke_gym.gym_boss_power);
 

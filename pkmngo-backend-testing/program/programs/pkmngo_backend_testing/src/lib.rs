@@ -43,6 +43,22 @@ pub mod pkmngo_backend_testing {
         ctx.accounts.player.authority.key() == ctx.accounts.signer.key(),
         GameErrorCode::WrongAuthority
     )]
+    pub fn reset_player(ctx: Context<ResetPlayer>, _level_seed: String) -> Result<()> {
+        reset_player::reset_player(ctx)
+    }
+
+    #[session_auth_or(
+        ctx.accounts.player.authority.key() == ctx.accounts.signer.key(),
+        GameErrorCode::WrongAuthority
+    )]
+    pub fn reset_game(ctx: Context<ResetGame>, _level_seed: String) -> Result<()> {
+        reset_game::reset_game(ctx)
+    }
+
+    #[session_auth_or(
+        ctx.accounts.player.authority.key() == ctx.accounts.signer.key(),
+        GameErrorCode::WrongAuthority
+    )]
     pub fn challenge_gym(ctx: Context<ChallengeGym>, _level_seed: String, counter: u16) -> Result<()> {
         challenge_gym::challenge_gym(ctx, counter)
     }

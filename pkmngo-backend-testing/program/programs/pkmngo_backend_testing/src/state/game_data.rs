@@ -20,6 +20,21 @@ pub struct GameData {
 }
 
 impl GameData {
+    pub fn reset_game(&mut self) -> Result<()> {
+        self.total_wood_collected = 0;
+        self.total_pokemon_in_world = MAX_POKEMON_IN_WORLD;
+
+        self.poke_gym.gym_name = "The Apex".to_string();
+        self.poke_gym.gym_coords = [6429, 1337];      // dummy coords
+        self.poke_gym.gym_boss_power = 0;
+        self.poke_gym.gym_boss = Pubkey::new_from_array([1; 32]);
+        self.poke_gym.gym_payable = false;
+
+        msg!("Game reset successfully!");
+
+        Ok(())
+    }
+    
     pub fn on_tree_chopped(&mut self, amount_chopped: u64) -> Result<()> {
         match self.total_wood_collected.checked_add(amount_chopped) {
             Some(v) => {
