@@ -6,4 +6,8 @@ pub enum GameErrorCode {
     NotEnoughEnergy,
     #[msg("Wrong Authority")]
     WrongAuthority,
+    #[msg("Arithmetic operation failed")]
+    ArithmeticError,
+    #[msg("Gym boss cannot catch Pokémon")]
+    GymBossCannotCatchPokemon,
 }

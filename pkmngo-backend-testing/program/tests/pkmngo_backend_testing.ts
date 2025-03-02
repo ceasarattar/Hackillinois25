@@ -130,22 +130,27 @@ describe("pkmngo_backend_testing", () => {
     //   await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
     // }
 
-    for (let i = 0; i < 11; i++) {
-      console.log(`Catch Pokemon instruction ${i}`);
+    // Fetch game data to get the current gym boss
+  let gameData = await program.account.gameData.fetch(gameDataPDA);
+  let gymBossPublicKey = gameData.pokeGym.gymBoss;
 
-      let tx = await program.methods
-        .catchPokemon(gameDataSeed, 0)
-        .accountsStrict({
-          player: playerPDA,
-          sessionToken: null,
-          signer: payer.publicKey,
-          gameData: gameDataPDA,
-          systemProgram: anchor.web3.SystemProgram.programId,
-        })
-        .rpc();
-      console.log("Catch pokemon instruction", tx);
-      await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
-    }
+  for (let i = 0; i < 11; i++) {
+    console.log(`Catch Pokemon instruction ${i}`);
+
+    let tx = await program.methods
+      .catchPokemon(gameDataSeed, 0)
+      .accountsStrict({
+        player: playerPDA,
+        sessionToken: null,
+        signer: payer.publicKey,
+        gameData: gameDataPDA,
+        gymBossAccount: gymBossPublicKey,  // Provide the gym boss account
+        systemProgram: anchor.web3.SystemProgram.programId,
+      })
+      .rpc();
+    console.log("Catch pokemon instruction", tx);
+    await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
+  }
 
     // challenging gym
     tx = await program.methods
@@ -219,6 +224,10 @@ describe("pkmngo_backend_testing", () => {
       console.log("idk smth ", e);
     }
 
+    // Fetch game data to get the current gym boss
+    gameData = await program.account.gameData.fetch(gameDataPDA);
+    gymBossPublicKey = gameData.pokeGym.gymBoss;
+
     for (let i = 0; i < 11; i++) {
       console.log(`Catch Pokemon instruction ${i}`);
 
@@ -229,6 +238,7 @@ describe("pkmngo_backend_testing", () => {
           sessionToken: null,
           signer: player2.publicKey,
           gameData: gameDataPDA,
+          gymBossAccount: gymBossPublicKey,  // Provide the gym boss account
           systemProgram: anchor.web3.SystemProgram.programId,
         })
         .transaction();

@@ -6,6 +6,13 @@ use session_keys::{Session, SessionToken};
 
 pub fn catch_pokemon(mut ctx: Context<CatchPokemon>, counter: u16, amount: u64) -> Result<()> {
     let account: &mut &mut CatchPokemon<'_> = &mut ctx.accounts;
+
+    // Check if the player is the gym boss and the gym is active
+    if account.game_data.poke_gym.gym_payable && account.signer.key() == account.game_data.poke_gym.gym_boss {
+        return err!(GameErrorCode::GymBossCannotCatchPokemon);
+    }
+
+    // Existing logic continues...
     account.player.update_energy()?;
     account.player.print()?;
 
@@ -13,15 +20,32 @@ pub fn catch_pokemon(mut ctx: Context<CatchPokemon>, counter: u16, amount: u64) 
         return err!(GameErrorCode::NotEnoughEnergy);
     }
 
+    // Pay fee to gym boss if gym is payable and player is not the gym boss
+    if account.game_data.poke_gym.gym_payable && account.signer.key() != account.game_data.poke_gym.gym_boss {
+        let fee_per_pokemon = 10000; // 10000 lamports = 0.00001 SOL
+        let total_fee = amount.checked_mul(fee_per_pokemon).ok_or(GameErrorCode::ArithmeticError)?;
+        anchor_lang::system_program::transfer(
+            CpiContext::new(
+                account.system_program.to_account_info(),
+                anchor_lang::system_program::Transfer {
+                    from: account.signer.to_account_info(),
+                    to: account.gym_boss_account.to_account_info(),
+                },
+            ),
+            total_fee,
+        )?;
+    }
+
     account.player.last_id = counter;
-    account.player.catch_pokemon(amount)?;
-    account.game_data.on_pokemon_caught(amount)?;
+    account.player.catch_pokemon(1)?;       // replacing amount with 1 here, repurposing amount
+    account.game_data.on_pokemon_caught(1)?;    // for amount of energy (pokeballs)
 
     msg!(
         "You caught a pokemon! You have {} pokemon and {} energy left.",
-        ctx.accounts.player.pokemon_count,
-        ctx.accounts.player.energy
+        account.player.pokemon_count,
+        account.player.energy
     );
+
     Ok(())
 }
 
@@ -29,15 +53,11 @@ pub fn catch_pokemon(mut ctx: Context<CatchPokemon>, counter: u16, amount: u64) 
 #[instruction(level_seed: String)]
 pub struct CatchPokemon<'info> {
     #[session(
-        // The ephemeral key pair signing the transaction
         signer = signer,
-        // The authority of the user account which must have created the session
         authority = player.authority.key()
     )]
-    // Session Tokens are passed as optional accounts
     pub session_token: Option<Account<'info, SessionToken>>,
 
-    // There is one PlayerData account
     #[account(
         mut,
         seeds = [b"player".as_ref(), player.authority.key().as_ref()],
@@ -45,8 +65,6 @@ pub struct CatchPokemon<'info> {
     )]
     pub player: Account<'info, PlayerData>,
 
-    // There can be multiple levels the seed for the level is passed in the instruction
-    // First player starting a new level will pay for the account in the current setup
     #[account(
         init_if_needed,
         payer = signer,
@@ -58,5 +76,11 @@ pub struct CatchPokemon<'info> {
 
     #[account(mut)]
     pub signer: Signer<'info>,
+
+    // Add the gym boss's account
+    ///CHECK: Add the gym boss's account (buzz off warning pls)
+    #[account(mut, address = game_data.poke_gym.gym_boss)]
+    pub gym_boss_account: AccountInfo<'info>,
+
     pub system_program: Program<'info, System>,
 }
