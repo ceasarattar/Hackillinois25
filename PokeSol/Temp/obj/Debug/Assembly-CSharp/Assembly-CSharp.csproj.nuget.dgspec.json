@@ -25,6 +25,482 @@
         "frameworks": {
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Solana.Unity.SDK.Editor.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Solana.Unity.SDK.Editor.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Addressables.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Addressables.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.DOTween.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.DOTween.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Linq.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Linq.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.TextMeshPro.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.TextMeshPro.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj",
+        "projectName": "com.solana.unity_sdk",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/com.solana.unity_sdk/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              },
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Solana.Unity.SDK.Editor.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Solana.Unity.SDK.Editor.csproj",
+        "projectName": "Solana.Unity.SDK.Editor",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Solana.Unity.SDK.Editor.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/Solana.Unity.SDK.Editor/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/com.solana.unity_sdk.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Addressables.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Addressables.csproj",
+        "projectName": "UniTask.Addressables",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Addressables.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UniTask.Addressables/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj",
+        "projectName": "UniTask",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UniTask/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.DOTween.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.DOTween.csproj",
+        "projectName": "UniTask.DOTween",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.DOTween.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UniTask.DOTween/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Linq.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Linq.csproj",
+        "projectName": "UniTask.Linq",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.Linq.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UniTask.Linq/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.TextMeshPro.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.TextMeshPro.csproj",
+        "projectName": "UniTask.TextMeshPro",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.TextMeshPro.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UniTask.TextMeshPro/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj": {
+                "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UniTask.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.201/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj",
+        "projectName": "UnityGifDecoder",
+        "projectPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/UnityGifDecoder.csproj",
+        "packagesPath": "/Users/ceasarattar/.nuget/packages/",
+        "outputPath": "/Users/ceasarattar/Desktop/Hackillinois25/PokeSol/Temp/obj/Debug/UnityGifDecoder/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ceasarattar/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
