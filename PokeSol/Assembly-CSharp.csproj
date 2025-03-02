@@ -274,6 +274,7 @@
     <Compile Include="Assets/Mapbox/Unity/MeshGeneration/Data/KdTreeCollection.cs" />
     <Compile Include="Assets/Mapbox/Unity/Telemetry/TelemetryFallback.cs" />
     <Compile Include="Assets/Mapbox/Unity/MeshGeneration/Modifiers/ModifierStack.cs" />
+    <Compile Include="Assets/Scripts/CameraFollow.cs" />
     <Compile Include="Assets/Mapbox/Unity/MeshGeneration/Modifiers/GameObjectModifier.cs" />
     <Compile Include="Assets/Mapbox/Unity/SourceLayers/SubLayerRealisticStyle.cs" />
     <Compile Include="Assets/Mapbox/Unity/MeshGeneration/Data/UnityTile.cs" />
