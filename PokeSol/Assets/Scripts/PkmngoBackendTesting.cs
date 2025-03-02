@@ -11,6 +11,7 @@ using Solana.Unity.Rpc.Core.Http;
 using Solana.Unity.Rpc.Core.Sockets;
 using Solana.Unity.Rpc.Types;
 using Solana.Unity.Wallet;
+using Solana.Unity.Rpc.Models;
 
 namespace PkmngoBackendTesting
 {
@@ -437,7 +438,7 @@ namespace PkmngoBackendTesting
                 AccountMeta.Writable(accounts.Player, false),
                 AccountMeta.Writable(accounts.GameData, false),
                 AccountMeta.Writable(accounts.Signer, true),
-                AccountMeta.ReadOnly(accounts.SystemProgram, false)
+                AccountMeta.ReadOnly(accounts.SystemProgram, false) // Fixed typo: assets to accounts
             };
             byte[] _data = new byte[1200];
             int offset = 0;

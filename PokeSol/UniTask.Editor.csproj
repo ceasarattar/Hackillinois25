@@ -64,12 +64,12 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Editor/SplitterGUILayout.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Editor/UniTaskTrackerTreeView.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Editor/UniTaskTrackerWindow.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Editor/SplitterGUILayout.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Editor/UniTaskTrackerTreeView.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Editor/UniTaskTrackerWindow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Editor/UniTask.Editor.asmdef" />
+    <None Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Editor/UniTask.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -489,23 +489,23 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Dex">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Dex.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Extensions">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Extensions.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NativeWebSocket">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/NativeWebSocket.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.KeyStore">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.KeyStore.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Chaos.NaCl">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Chaos.NaCl.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -513,39 +513,39 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Avro">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Avro.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.SessionKeys">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.SessionKeys.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Soar">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Soar.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Programs">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Programs.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Programs.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp-latest">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/websocket-sharp-latest.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/BouncyCastle.Crypto.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Wallet">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Wallet.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Rpc">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Rpc.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Rpc.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Metaplex">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Metaplex.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">

@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using Solana.Unity.Rpc;
 using Solana.Unity.Wallet;
 using Solana.Unity.Rpc.Builders;
@@ -15,61 +17,72 @@ public class GameManager : MonoBehaviour
     private PkmngoBackendTestingClient client;
     private PublicKey programId = new PublicKey("pkm3zzV6AqQoZDaev9gciaiE4R3CDxE8LsrrzBFnfGB");
     private PublicKey playerPublicKey;
-    private WalletBase wallet;
+    private Account walletAccount;
 
-    [SerializeField, Tooltip("The UI button to catch Pokémon")]
-    private UnityEngine.UI.Button catchButton;
+    [SerializeField] private Button catchButton;
+    [SerializeField] private Button connectWalletButton;
 
-    [SerializeField, Tooltip("The UI button to connect the wallet")]
-    private UnityEngine.UI.Button connectWalletButton;
+    private bool isWalletConnected = true;
 
-    private bool isWalletConnected = false;
+    // HARDCODED PRIVATE KEY (USE WITH CAUTION)
+    private Wallet wallet;
+    private byte[] privateKeyBytes = new byte[]
+    {
+        206,157,165,241,160,13,140,97,62,31,78,
+        246,157,9,56,103,7,210,9,84,28,123,190,30,86,181,185,116,178,6,100,116,13,
+        139,181,176,161,195,173,40,149,144,132,201,119,217,238,204,57,198,155,69,37,
+        233,86,193,102,156,67,99,244,146,118,49
+    };
+
+    // HARDCODED PUBLIC KEY
+    private const string PUBLIC_KEY = "usrtFG8kbXNxQebcqm4fEW7hmDt2YTAdTF1VtZsfBXn";
 
     void Start()
     {
         IRpcClient rpcClient = ClientFactory.GetClient(Cluster.DevNet);
         IStreamingRpcClient streamingRpcClient = ClientFactory.GetStreamingClient(Cluster.DevNet);
-
         client = new PkmngoBackendTestingClient(rpcClient, streamingRpcClient, programId);
 
-        // Setup button listeners
-        if (catchButton != null)
-            catchButton.onClick.AddListener(OnCatchPokemonButton);
-        if (connectWalletButton != null)
-            connectWalletButton.onClick.AddListener(() => StartCoroutine(ConnectWalletRoutine()));
+        if (catchButton != null) catchButton.onClick.AddListener(OnCatchPokemonButton);
+        if (connectWalletButton != null) connectWalletButton.onClick.AddListener(() => StartCoroutine(ConnectWalletRoutine()));
     }
 
     private IEnumerator ConnectWalletRoutine()
     {
-        Task connectTask = ConnectWallet();
-        yield return new WaitUntil(() => connectTask.IsCompleted);
+        ConnectWallet();
+        yield return new WaitForSeconds(1);
 
         if (isWalletConnected)
         {
-            Task fetchGameDataTask = FetchGameData();
-            yield return new WaitUntil(() => fetchGameDataTask.IsCompleted);
-
-            Task fetchPlayerDataTask = FetchPlayerData();
-            yield return new WaitUntil(() => fetchPlayerDataTask.IsCompleted);
-
-            Task subscribeTask = SubscribeToPlayerData();
-            yield return new WaitUntil(() => subscribeTask.IsCompleted);
+            yield return FetchGameData();
+            yield return FetchPlayerData();
+            yield return SubscribeToPlayerData();
         }
     }
 
-    private async Task ConnectWallet()
+    private void ConnectWallet()
     {
         try
         {
-            // This is a simplified wallet connection - in production, use a proper wallet adapter
-            wallet = new Wallet(new byte[32]); // Replace with actual wallet implementation
-            playerPublicKey = wallet.Account.PublicKey;
-            isWalletConnected = true;
-            Debug.Log($"Connected wallet: {playerPublicKey}");
+            // Use the hardcoded public key
+            playerPublicKey = new PublicKey(PUBLIC_KEY);
 
-            // Disable connect button after successful connection
-            if (connectWalletButton != null)
-                connectWalletButton.interactable = false;
+            // Initialize the wallet with the hardcoded private key
+            PrivateKey privateKey;
+            try
+            {
+                privateKey = new PrivateKey(privateKeyBytes);
+            }
+            catch (Exception ex)
+            {
+                Debug.LogError($"Failed to initialize private key: {ex.Message}");
+                return;
+            }
+
+            // Create a Wallet using the private key bytes directly
+            wallet = new Wallet(privateKeyBytes);
+            walletAccount = wallet.Account; // Get the Account from the Wallet
+            Debug.Log($"Connected wallet: {playerPublicKey}");
         }
         catch (Exception ex)
         {
@@ -98,9 +111,9 @@ public class GameManager : MonoBehaviour
         {
             var gameDataAddress = GetGameDataAddress();
             var result = await client.GetGameDataAsync(gameDataAddress.ToString());
-            if (result.WasSuccessful)
+            if (result.WasSuccessful && result.ParsedResult != null)
             {
-                GameData gameData = result.Result;
+                GameData gameData = result.ParsedResult;
                 Debug.Log($"Total Wood: {gameData.TotalWoodCollected}, Pokémon: {gameData.TotalPokemonInWorld}");
             }
             else
@@ -122,10 +135,14 @@ public class GameManager : MonoBehaviour
         {
             var playerDataAddress = GetPlayerDataAddress(playerPublicKey);
             var result = await client.GetPlayerDataAsync(playerDataAddress.ToString());
-            if (result.WasSuccessful)
+            if (result.WasSuccessful && result.ParsedResult != null)
             {
-                PlayerData playerData = result.Result;
+                PlayerData playerData = result.ParsedResult;
                 Debug.Log($"Player: {playerData.Name}, Level: {playerData.Level}, Wood: {playerData.Wood}");
+            }
+            else
+            {
+                Debug.LogError("Failed to fetch player data");
             }
         }
         catch (Exception ex)
@@ -167,7 +184,7 @@ public class GameManager : MonoBehaviour
         {
             var playerDataAddress = GetPlayerDataAddress(playerPublicKey);
             var gameDataAddress = GetGameDataAddress();
-            var gymBossAccount = new PublicKey("11111111111111111111111111111111"); // Replace with actual logic
+            var gymBossAccount = new PublicKey("11111111111111111111111111111111111111111111111"); // Placeholder
 
             var accounts = new CatchPokemonAccounts
             {
@@ -179,24 +196,54 @@ public class GameManager : MonoBehaviour
             };
 
             var instruction = PkmngoBackendTestingProgram.CatchPokemon(accounts, levelSeed, counter);
-            var blockhash = await client.RpcClient.GetLatestBlockhashAsync();
 
-            var tx = new TransactionBuilder()
-                .SetRecentBlockHash(blockhash.Result.Value.Blockhash)
-                .AddInstruction(instruction)
-                .Build(wallet.Account); // Pass the signing account
-
-            var signedTx = wallet.SignTransaction(tx);
-            var txId = await client.RpcClient.SendTransactionAsync(signedTx);
-            var confirmation = await client.RpcClient.ConfirmTransactionAsync(txId.Result);
-
-            if (!confirmation.WasSuccessful)
+            var latestBlockhash = await client.RpcClient.GetLatestBlockHashAsync();
+            if (latestBlockhash == null || latestBlockhash.Result == null)
             {
-                var error = client.GetErrorForInstruction(txId.Result);
-                Debug.LogError($"Transaction failed: {error?.Message}");
+                Debug.LogError("Failed to retrieve latest blockhash from Solana.");
+                return false;
             }
 
-            return confirmation.WasSuccessful;
+            Debug.Log($"Latest Blockhash: {latestBlockhash.Result.Value.Blockhash}");
+
+            var tx = new TransactionBuilder()
+                .SetRecentBlockHash(latestBlockhash.Result.Value.Blockhash)
+                .AddInstruction(instruction)
+                .SetFeePayer(playerPublicKey)
+                .Build(walletAccount);
+
+            Debug.Log($"Transaction built successfully. Sending to Solana...");
+
+            var txId = await client.RpcClient.SendTransactionAsync(tx);
+            if (!txId.WasSuccessful)
+            {
+                Debug.LogError($"Transaction failed: {txId.Reason}");
+                return false;
+            }
+
+            Debug.Log($"Transaction sent successfully. ID: {txId.Result}");
+
+            // Wait for confirmation
+            bool confirmed = false;
+            for (int i = 0; i < 10; i++)
+            {
+                var checkStatus = await client.RpcClient.GetSignatureStatusesAsync(new List<string> { txId.Result });
+                if (checkStatus.Result.Value[0] != null && checkStatus.Result.Value[0].ConfirmationStatus == "confirmed")
+                {
+                    confirmed = true;
+                    break;
+                }
+                await Task.Delay(2000);
+            }
+
+            if (!confirmed)
+            {
+                Debug.LogError("Transaction confirmation failed!");
+                return false;
+            }
+
+            Debug.Log("Pokémon caught successfully! Transaction confirmed!");
+            return true;
         }
         catch (Exception ex)
         {
@@ -207,11 +254,12 @@ public class GameManager : MonoBehaviour
 
     public void OnCatchPokemonButton()
     {
-        if (!isWalletConnected)
+        if (!isWalletConnected || playerPublicKey == null)
         {
             Debug.LogError("Please connect wallet first");
             return;
         }
+
         StartCoroutine(CatchPokemonRoutine("forest_level", 1));
     }
 
@@ -220,24 +268,18 @@ public class GameManager : MonoBehaviour
         if (catchButton != null)
             catchButton.interactable = false;
 
-        bool result = false;
         Task<bool> catchTask = CatchPokemon(levelSeed, counter);
         yield return new WaitUntil(() => catchTask.IsCompleted);
-        result = catchTask.Result;
 
-        Debug.Log(result ? "Pokémon caught!" : "Failed to catch Pokémon");
+        Debug.Log(catchTask.Result ? "Pokémon caught!" : "Failed to catch Pokémon");
 
         if (catchButton != null)
             catchButton.interactable = true;
-
-        yield return null;
     }
 
     void OnDestroy()
     {
-        if (catchButton != null)
-            catchButton.onClick.RemoveListener(OnCatchPokemonButton);
-        if (connectWalletButton != null)
-            connectWalletButton.onClick.RemoveAllListeners();
+        if (catchButton != null) catchButton.onClick.RemoveListener(OnCatchPokemonButton);
+        if (connectWalletButton != null) connectWalletButton.onClick.RemoveAllListeners();
     }
 }

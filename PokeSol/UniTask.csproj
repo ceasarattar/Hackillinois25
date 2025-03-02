@@ -64,82 +64,82 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.Threading.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.Delay.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/StatePool.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/TriggerEvent.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAll.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncStartTrigger.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/TaskTracker.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityBindingExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/ContinuationQueue.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/AsyncLazy.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Progress.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/IUniTaskSource.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskObservableExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAwaitableExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskScheduler.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/PooledDelegate.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/IUniTaskAsyncEnumerable.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/DiagnosticsExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Channel.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskMethodBuilder.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/UnityEqualityComparer.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncTriggerExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskVoid.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CancellationTokenEqualityComparer.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/_InternalVisibleTo.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.AsyncGPUReadback.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/EnumerableAsyncExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/PlayerLoopHelper.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAll.Generated.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/PlayerLoopTimer.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncMethodBuilderAttribute.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityWebRequestException.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.Bridge.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/AsyncUnit.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncTriggerBase.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.AssetBundleRequestAllAssets.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAny.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/ArrayPoolUtil.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/TaskPool.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/PlayerLoopRunner.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CancellationTokenExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.uGUI.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.MonoBehaviour.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/Error.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.Factory.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/MinimumQueue.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/ArrayPool.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAny.Generated.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.Jobs.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/ValueStopwatch.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncAwakeTrigger.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/AsyncReactiveProperty.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/ExceptionExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/RuntimeHelpersAbstraction.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/ArrayUtil.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskExtensions.Shorthand.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncDestroyTrigger.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/TimeoutController.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/EnumeratorAsyncExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.WaitUntil.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/CancellationTokenSourceExtensions.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.Run.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/WeakDictionary.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Triggers/MonoBehaviourMessagesTriggers.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTaskSynchronizationContext.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/MoveNextSource.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/Internal/UnityWebRequestExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/PlayerLoopHelper.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.Delay.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.MonoBehaviour.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CompilerServices/StateMachineRunner.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/AsyncReactiveProperty.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/Error.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CancellationTokenSourceExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/TaskTracker.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.Bridge.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/MoveNextSource.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAwaitableExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/TriggerEvent.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskObservableExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CancellationTokenExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CancellationTokenEqualityComparer.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncAwakeTrigger.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Progress.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/ArrayPool.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/IUniTaskAsyncEnumerable.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Channel.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/PlayerLoopRunner.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.uGUI.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskCompletionSource.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncTriggerExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/WeakDictionary.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/MinimumQueue.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/AsyncUnit.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.AssetBundleRequestAllAssets.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/AsyncLazy.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskVoidMethodBuilder.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAll.Generated.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/ExceptionExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncMethodBuilderAttribute.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/StatePool.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/ValueStopwatch.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/TimeoutController.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/IUniTaskSource.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/RuntimeHelpersAbstraction.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/DiagnosticsExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/CompilerServices/AsyncUniTaskMethodBuilder.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/MonoBehaviourMessagesTriggers.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.WaitUntil.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.Factory.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/UnityEqualityComparer.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityWebRequestException.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/PlayerLoopTimer.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/PooledDelegate.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.Jobs.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/EnumerableAsyncExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskExtensions.Shorthand.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskScheduler.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/ArrayPoolUtil.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncStartTrigger.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskSynchronizationContext.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncTriggerBase.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAny.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/TaskPool.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/UnityWebRequestExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTaskVoid.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.Run.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/ArrayUtil.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.Threading.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/EnumeratorAsyncExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/_InternalVisibleTo.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAny.Generated.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Internal/ContinuationQueue.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityAsyncExtensions.AsyncGPUReadback.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UnityBindingExtensions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/Triggers/AsyncDestroyTrigger.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.WhenAll.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/Solana.Unity-SDK/Runtime/Plugins/UniTask/Runtime/UniTask.asmdef" />
+    <None Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/UniTask/Runtime/UniTask.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -555,23 +555,23 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Dex">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Dex.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Extensions">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Extensions.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="NativeWebSocket">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/NativeWebSocket.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.KeyStore">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.KeyStore.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Chaos.NaCl">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Chaos.NaCl.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
@@ -579,39 +579,39 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Avro">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Avro.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.SessionKeys">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.SessionKeys.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Soar">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Soar.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Programs">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Programs.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Programs.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp-latest">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/websocket-sharp-latest.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/BouncyCastle.Crypto.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/BouncyCastle.Crypto.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Wallet">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Wallet.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Rpc">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Rpc.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Rpc.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Metaplex">
-      <HintPath>Assets/Solana.Unity-SDK/Packages/Solana.Unity.Metaplex.dll</HintPath>
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
