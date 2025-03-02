@@ -24,7 +24,7 @@ pub struct InitPlayer<'info> {
         seeds = [b"player".as_ref(), signer.key().as_ref()],
         bump,
     )]
-    pub player: Account<'info, PlayerData>,
+    pub player: Box<Account<'info, PlayerData>>,
 
     #[account(
         init_if_needed,

@@ -3,10 +3,20 @@ use anchor_lang::prelude::*;
 use crate::constants::MAX_WOOD_PER_TREE;
 use crate::constants::MAX_POKEMON_IN_WORLD;
 
+pub struct PokeGym {
+    pub gym_name: String,
+    pub gym_coords: [u64; 2],
+    pub gym_boss: Pubkey,
+    pub gym_boss_power: u64,
+}
+
 #[account]
 pub struct GameData {
     pub total_wood_collected: u64,
     pub total_pokemon_in_world: u64,
+
+    // also add a poke_gym struct here
+    pub poke_gym: PokeGym,
 }
 
 impl GameData {

@@ -1,5 +1,7 @@
 use crate::constants::*;
 use anchor_lang::prelude::*;
+// use rand::Rng;
+use crate::globl_funcs::*;
 
 #[account]
 pub struct PlayerData {
@@ -14,6 +16,12 @@ pub struct PlayerData {
 
     // adding stuff for pokemon game
     pub pokemon_count: u64,
+
+    // pokemon collected by player
+    // bit 0-3: pokemon id
+    // bit 4-14: level
+    // bit 15: is shiny
+    pub pokemon_collection: [u16; MAX_POKEMON_COLLECTION as usize],
 }
 
 impl PlayerData {
@@ -26,6 +34,9 @@ impl PlayerData {
             self.pokemon_count,
             self.energy
         );
+        for i in 0..self.pokemon_count as usize {
+            msg!("Pokemon {}: {}", i, self.pokemon_collection[i]);
+        }
         Ok(())
     }
 
@@ -34,6 +45,10 @@ impl PlayerData {
         self.energy = MAX_ENERGY;
         self.last_login = Clock::get()?.unix_timestamp;
         self.pokemon_count = 0;
+
+        for i in 0..MAX_POKEMON_COLLECTION {
+            self.pokemon_collection[i as usize] = 0;
+        }
 
         msg!("Player reset successfully!");
 
@@ -86,6 +101,36 @@ impl PlayerData {
     }
 
     pub fn catch_pokemon(&mut self, amount: u64) -> Result<()> {
+
+        // use solana_program::{
+        //     sysvar::{clock::Clock, Sysvar},
+        //     account_info::AccountInfo,
+        // };
+
+        // getting solana clock or smth
+        let clock = Clock::get();
+        let seed = clock.unwrap().slot as u64;
+
+
+
+        // rolling random pokemon and adding to collection
+        let poke_id: u16 = random_in_range(seed, 0, 15) as u16;
+        let poke_level: u16 = random_in_range(seed, 0, 2047) as u16;
+        let poke_shiny_decider = random_in_range(seed, 0, 100);
+        let mut poke_shiny: u16 = 0;
+        if poke_shiny_decider < 10 {
+            poke_shiny = 1;
+        }
+
+        // final pokemon entry
+        let poke_data: u16 = poke_id | (poke_level << 4) | (poke_shiny << 15);
+
+        if self.pokemon_count >= MAX_POKEMON_COLLECTION {
+            msg!("You have reached the maximum number of pokemon you can have!");
+            return Ok(());
+        }
+        self.pokemon_collection[self.pokemon_count as usize] = poke_data;
+
         match self.pokemon_count.checked_add(amount) {
             Some(v) => {
                 self.pokemon_count = v;

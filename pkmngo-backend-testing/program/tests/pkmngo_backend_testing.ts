@@ -38,6 +38,7 @@ describe("pkmngo_backend_testing", () => {
     );
 
     try {
+      console.log("test log asddfasdf");
       let tx = await program.methods
         .initPlayer(gameDataSeed)
         .accountsStrict({
@@ -65,7 +66,7 @@ describe("pkmngo_backend_testing", () => {
           systemProgram: anchor.web3.SystemProgram.programId,
           sessionToken: null,
         })
-        .rpc({ skipPreflight: true });
+        .rpc({ skipPreflight: false});
       console.log("Player reset", tx);
 
       await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
@@ -74,22 +75,22 @@ describe("pkmngo_backend_testing", () => {
       console.log("idk smth ", e);
     }
 
-    for (let i = 0; i < 11; i++) {
-      console.log(`Chop instruction ${i}`);
+    // for (let i = 0; i < 11; i++) {
+    //   console.log(`Chop instruction ${i}`);
 
-      let tx = await program.methods
-        .chopTree(gameDataSeed, 0)
-        .accountsStrict({
-          player: playerPDA,
-          sessionToken: null,
-          signer: payer.publicKey,
-          gameData: gameDataPDA,
-          systemProgram: anchor.web3.SystemProgram.programId,
-        })
-        .rpc();
-      console.log("Chop instruction", tx);
-      await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
-    }
+    //   let tx = await program.methods
+    //     .chopTree(gameDataSeed, 0)
+    //     .accountsStrict({
+    //       player: playerPDA,
+    //       sessionToken: null,
+    //       signer: payer.publicKey,
+    //       gameData: gameDataPDA,
+    //       systemProgram: anchor.web3.SystemProgram.programId,
+    //     })
+    //     .rpc();
+    //   console.log("Chop instruction", tx);
+    //   await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
+    // }
 
     for (let i = 0; i < 11; i++) {
       console.log(`Catch Pokemon instruction ${i}`);

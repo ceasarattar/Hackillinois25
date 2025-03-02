@@ -27,7 +27,7 @@ pub struct ResetPlayer<'info> {
         seeds = [b"player".as_ref(), player.authority.key().as_ref()],
         bump,
     )]
-    pub player: Account<'info, PlayerData>,
+    pub player: Box<Account<'info, PlayerData>>,
 
     #[account(mut)]
     pub game_data: Account<'info, GameData>,

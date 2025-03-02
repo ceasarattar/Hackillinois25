@@ -5,6 +5,7 @@ pub mod constants;
 pub mod errors;
 pub mod instructions;
 pub mod state;
+pub mod globl_funcs;
 use instructions::*;
 
 declare_id!("pkm3zzV6AqQoZDaev9gciaiE4R3CDxE8LsrrzBFnfGB");
