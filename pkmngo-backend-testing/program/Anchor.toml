@@ -1,7 +1,7 @@
 [features]
 seeds = false
 [programs.localnet]
-pkmngo_backend_testing = "MkabCfyUD6rBTaYHpgKBBpBo5qzWA2pK2hrGGKMurJt"
+pkmngo_backend_testing = "pkm3zzV6AqQoZDaev9gciaiE4R3CDxE8LsrrzBFnfGB"
 
 [registry]
 url = "https://anchor.projectserum.com"

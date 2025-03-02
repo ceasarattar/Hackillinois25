@@ -55,6 +55,25 @@ describe("pkmngo_backend_testing", () => {
       console.log("Player already exists: ", e);
     }
 
+    try {
+      let tx = await program.methods
+        .resetPlayer(gameDataSeed)
+        .accountsStrict({
+          player: playerPDA,
+          signer: payer.publicKey,
+          gameData: gameDataPDA,
+          systemProgram: anchor.web3.SystemProgram.programId,
+          sessionToken: null,
+        })
+        .rpc({ skipPreflight: true });
+      console.log("Player reset", tx);
+
+      await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
+      console.log("Confirmed", tx);
+    } catch (e) {
+      console.log("idk smth ", e);
+    }
+
     for (let i = 0; i < 11; i++) {
       console.log(`Chop instruction ${i}`);
 
@@ -72,6 +91,23 @@ describe("pkmngo_backend_testing", () => {
       await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
     }
 
+    for (let i = 0; i < 11; i++) {
+      console.log(`Catch Pokemon instruction ${i}`);
+
+      let tx = await program.methods
+        .catchPokemon(gameDataSeed, 0)
+        .accountsStrict({
+          player: playerPDA,
+          sessionToken: null,
+          signer: payer.publicKey,
+          gameData: gameDataPDA,
+          systemProgram: anchor.web3.SystemProgram.programId,
+        })
+        .rpc();
+      console.log("Catch pokemon instruction", tx);
+      await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
+    }
+
     const accountInfo = await anchor
       .getProvider()
       .connection.getAccountInfo(playerPDA, "confirmed");
@@ -82,4 +118,6 @@ describe("pkmngo_backend_testing", () => {
     );
     console.log("Player account info", JSON.stringify(decoded));
   });
+
+  
 });

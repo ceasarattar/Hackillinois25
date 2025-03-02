@@ -11,17 +11,32 @@ pub struct PlayerData {
     pub energy: u64,
     pub last_login: i64,
     pub last_id: u16,
+
+    // adding stuff for pokemon game
+    pub pokemon_count: u64,
 }
 
 impl PlayerData {
     pub fn print(&mut self) -> Result<()> {
         // Note that logging costs a lot of compute. So don't use it too much.
         msg!(
-            "Authority: {} Wood: {} Energy: {}",
+            "Authority: {} Wood: {} Pokemon: {} Energy: {}",
             self.authority,
             self.wood,
+            self.pokemon_count,
             self.energy
         );
+        Ok(())
+    }
+
+    pub fn reset_player(&mut self) -> Result<()> {
+        self.wood = 0;
+        self.energy = MAX_ENERGY;
+        self.last_login = Clock::get()?.unix_timestamp;
+        self.pokemon_count = 0;
+
+        msg!("Player reset successfully!");
+
         Ok(())
     }
 
@@ -57,6 +72,26 @@ impl PlayerData {
             }
             None => {
                 msg!("Total wood reached!");
+            }
+        };
+        match self.energy.checked_sub(amount) {
+            Some(v) => {
+                self.energy = v;
+            }
+            None => {
+                self.energy = 0;
+            }
+        };
+        Ok(())
+    }
+
+    pub fn catch_pokemon(&mut self, amount: u64) -> Result<()> {
+        match self.pokemon_count.checked_add(amount) {
+            Some(v) => {
+                self.pokemon_count = v;
+            }
+            None => {
+                msg!("You can never have enough pokemon :)");
             }
         };
         match self.energy.checked_sub(amount) {

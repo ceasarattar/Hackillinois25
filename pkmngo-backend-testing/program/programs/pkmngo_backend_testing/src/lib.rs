@@ -7,7 +7,7 @@ pub mod instructions;
 pub mod state;
 use instructions::*;
 
-declare_id!("MkabCfyUD6rBTaYHpgKBBpBo5qzWA2pK2hrGGKMurJt");
+declare_id!("pkm3zzV6AqQoZDaev9gciaiE4R3CDxE8LsrrzBFnfGB");
 
 #[program]
 pub mod pkmngo_backend_testing {
@@ -28,5 +28,21 @@ pub mod pkmngo_backend_testing {
     )]
     pub fn chop_tree(ctx: Context<ChopTree>, _level_seed: String, counter: u16) -> Result<()> {
         chop_tree::chop_tree(ctx, counter, 1)
+    }
+
+    #[session_auth_or(
+        ctx.accounts.player.authority.key() == ctx.accounts.signer.key(),
+        GameErrorCode::WrongAuthority
+    )]
+    pub fn catch_pokemon(ctx: Context<CatchPokemon>, _level_seed: String, counter: u16) -> Result<()> {
+        catch_pokemon::catch_pokemon(ctx, counter, 1)
+    }
+
+    #[session_auth_or(
+        ctx.accounts.player.authority.key() == ctx.accounts.signer.key(),
+        GameErrorCode::WrongAuthority
+    )]
+    pub fn reset_player(ctx: Context<ResetPlayer>, _level_seed: String) -> Result<()> {
+        reset_player::reset_player(ctx)
     }
 }
