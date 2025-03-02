@@ -2,4 +2,4 @@ pub const TIME_TO_REFILL_ENERGY: i64 = 60;
 pub const MAX_ENERGY: u64 = 100;
 pub const MAX_WOOD_PER_TREE: u64 = 100000;
 pub const MAX_POKEMON_IN_WORLD: u64 = 1000000;
-pub const MAX_POKEMON_COLLECTION: u64 = 10;
+pub const MAX_POKEMON_COLLECTION: u64 = 100;

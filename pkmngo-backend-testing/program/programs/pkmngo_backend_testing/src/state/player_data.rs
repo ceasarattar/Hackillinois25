@@ -17,6 +17,8 @@ pub struct PlayerData {
     // adding stuff for pokemon game
     pub pokemon_count: u64,
 
+    pub combat_lvl: u64,
+
     // pokemon collected by player
     // bit 0-3: pokemon id
     // bit 4-14: level
@@ -28,11 +30,12 @@ impl PlayerData {
     pub fn print(&mut self) -> Result<()> {
         // Note that logging costs a lot of compute. So don't use it too much.
         msg!(
-            "Authority: {} Wood: {} Pokemon: {} Energy: {}",
+            "Authority: {} Wood: {} Pokemon: {} Energy: {} Combat Level: {}",
             self.authority,
             self.wood,
             self.pokemon_count,
-            self.energy
+            self.energy,
+            self.combat_lvl
         );
         for i in 0..self.pokemon_count as usize {
             msg!("Pokemon {}: {}", i, self.pokemon_collection[i]);
@@ -45,6 +48,7 @@ impl PlayerData {
         self.energy = MAX_ENERGY;
         self.last_login = Clock::get()?.unix_timestamp;
         self.pokemon_count = 0;
+        self.combat_lvl = 0;
 
         for i in 0..MAX_POKEMON_COLLECTION {
             self.pokemon_collection[i as usize] = 0;
@@ -122,6 +126,10 @@ impl PlayerData {
             poke_shiny = 1;
         }
 
+        // add new pokemon combat lvl to overall combat lvl
+        let poke_cbt_lvl = (poke_level as u64) * (1 + poke_shiny as u64);
+        self.combat_lvl += poke_cbt_lvl;
+
         // final pokemon entry
         let poke_data: u16 = poke_id | (poke_level << 4) | (poke_shiny << 15);
 
@@ -149,4 +157,5 @@ impl PlayerData {
         };
         Ok(())
     }
+
 }

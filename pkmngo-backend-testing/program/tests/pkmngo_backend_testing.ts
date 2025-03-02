@@ -9,6 +9,10 @@ describe("pkmngo_backend_testing", () => {
   const payer = provider.wallet as anchor.Wallet;
   const gameDataSeed = "gameData";
 
+
+
+  
+
   it("Init player and chop tree!", async () => {
     console.log("Local address", payer.publicKey.toBase58());
 
@@ -48,6 +52,11 @@ describe("pkmngo_backend_testing", () => {
           systemProgram: anchor.web3.SystemProgram.programId,
         })
         .rpc({ skipPreflight: true });
+
+        /*
+          .transaction()
+        */
+
       console.log("Init transaction", tx);
 
       await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
@@ -108,6 +117,20 @@ describe("pkmngo_backend_testing", () => {
       console.log("Catch pokemon instruction", tx);
       await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
     }
+
+    // challenging gym
+    let tx = await program.methods
+      .challengeGym(gameDataSeed, 0)
+      .accountsStrict({
+        player: playerPDA,
+        sessionToken: null,
+        signer: payer.publicKey,
+        gameData: gameDataPDA,
+        systemProgram: anchor.web3.SystemProgram.programId,
+      })
+      .rpc();
+    console.log("Challenge gym instruction", tx);
+    await anchor.getProvider().connection.confirmTransaction(tx, "confirmed");
 
     const accountInfo = await anchor
       .getProvider()

@@ -3,14 +3,30 @@ use crate::state::player_data::PlayerData;
 use crate::{constants::MAX_ENERGY, constants::MAX_POKEMON_IN_WORLD, GameData};
 use anchor_lang::prelude::*;
 
+#[macro_export]
+macro_rules! default_pubkey {
+    () => {
+        Pubkey::new_from_array([1; 32])
+    };
+}
+
 pub fn init_player(ctx: Context<InitPlayer>) -> Result<()> {
     ctx.accounts.player.energy = MAX_ENERGY;
+    ctx.accounts.player.combat_lvl = 0;
     ctx.accounts.player.last_login = Clock::get()?.unix_timestamp;
     ctx.accounts.player.authority = ctx.accounts.signer.key();
 
     // this gonna work frfr
     // init global pokemon count
     ctx.accounts.game_data.total_pokemon_in_world = MAX_POKEMON_IN_WORLD;
+    
+    // initializing gym data
+    ctx.accounts.game_data.poke_gym.gym_name = "The Apex".to_string();
+    ctx.accounts.game_data.poke_gym.gym_coords = [6429, 1337];      // dummy coords
+    ctx.accounts.game_data.poke_gym.gym_boss_power = 0;
+    // initializing gym boss to default pubkey
+    ctx.accounts.game_data.poke_gym.gym_boss = default_pubkey!();
+    ctx.accounts.game_data.poke_gym.gym_payable = false;
     Ok(())
 }
 
@@ -20,7 +36,7 @@ pub struct InitPlayer<'info> {
     #[account(
         init,
         payer = signer,
-        space = 1000, // 8+32+x+1+8+8+8 But taking 1000 to have space to expand easily.
+        space = 10000, // 8+32+x+1+8+8+8 But taking 1000 to have space to expand easily.
         seeds = [b"player".as_ref(), signer.key().as_ref()],
         bump,
     )]

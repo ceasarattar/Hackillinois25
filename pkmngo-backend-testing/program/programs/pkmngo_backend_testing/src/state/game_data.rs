@@ -1,13 +1,13 @@
 use anchor_lang::prelude::*;
+use crate::constants::*;
 
-use crate::constants::MAX_WOOD_PER_TREE;
-use crate::constants::MAX_POKEMON_IN_WORLD;
-
+#[derive(Default, AnchorSerialize, AnchorDeserialize, Clone, Debug)]
 pub struct PokeGym {
     pub gym_name: String,
     pub gym_coords: [u64; 2],
     pub gym_boss: Pubkey,
     pub gym_boss_power: u64,
+    pub gym_payable: bool,
 }
 
 #[account]
@@ -57,6 +57,16 @@ impl GameData {
         };
 
         msg!("Total pokemon in world: {}", self.total_pokemon_in_world);
+
+        Ok(())
+    }
+
+    pub fn on_gym_captured(&mut self, new_boss: Pubkey, new_power: u64) -> Result<()> {
+        self.poke_gym.gym_boss = new_boss;
+        self.poke_gym.gym_boss_power = new_power;
+        self.poke_gym.gym_payable = true;
+
+        msg!("Gym successfully captured by {}", new_boss);
 
         Ok(())
     }
