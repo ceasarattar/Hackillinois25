@@ -64,21 +64,21 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifPlainText.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Decode/GifBitBlockReader.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Utils/BitUtils.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifNetscapeExtension.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/GifStream.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifDisposalMethod.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifImageDescriptor.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifApplicationExtension.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifGraphicControl.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifHeader.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifPlainText.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Decode/GifBitBlockReader.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Decode/GifCanvas.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifImage.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Decode/GifLzwDictionary.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifDisposalMethod.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifImageDescriptor.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifApplicationExtension.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifPalette.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifGraphicControl.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifVersion.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/Model/GifHeader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Unity-GifDecoder/UnityGifDecoder.asmdef" />
@@ -432,6 +432,10 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.17f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Chaos.NaCl">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.VectorTile.Geometry">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
       <Private>False</Private>
@@ -448,12 +452,20 @@
       <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.Soar">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Dex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MapboxAccountsUnity">
@@ -464,8 +476,16 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="websocket-sharp-latest">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Wallet">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.Json">
@@ -476,12 +496,20 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.KeyStore">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.IO.Compression">
       <HintPath>Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.VectorTileReader">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Metaplex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
@@ -492,68 +520,40 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Dex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Extensions">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NativeWebSocket">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.KeyStore">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Chaos.NaCl">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+    <Reference Include="Avro">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Avro">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.SessionKeys">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Soar">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Solana.Unity.Programs">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Programs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="websocket-sharp-latest">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Extensions">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/BouncyCastle.Crypto.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Solana.Unity.Wallet">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
+    <Reference Include="Solana.Unity.SessionKeys">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NativeWebSocket">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Rpc">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Rpc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Metaplex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

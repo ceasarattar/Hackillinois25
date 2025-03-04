@@ -65,74 +65,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_GeoCoordinateBounds.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Geocoder.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Utils.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Map.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/MaterialModifierEditor.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeAroundTransformTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntries.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/VectorLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/LayerPerformanceOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/FeatureSectionMultiColumnHeader.cs" />
-    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntry.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/LineGeometryOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/MapboxConfigurationWindow.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/StyleOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_PolylineUtils.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/VectorSubLayerTreeView.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/MapImageFactoryEditor.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ImageryLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_FileSource.cs" />
-    <Compile Include="Assets/Mapbox/Core/probe-extractor-cs/Tests/Editor/MapboxUnitTests_ProbeExtractorCs.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/FactoryEditor.cs" />
-    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/Enums.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapPlacementOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_BboxToGeoCoordinateBoundsConverter.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_PolylineToGeoCoordinateListConverter.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/EditorHelper.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/StyleSearchWindow.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/PointsOfInterestSubLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/CameraBoundsTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_ForwardGeocodeResource.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Directions.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/AtlasTemplateGenerator.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/TreeModel.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Compression.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/TreeViewWithTreeModel.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/ScriptableCreatorWindow.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/GeocodeAttributeSearchWindow.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/FeaturesSubLayerPropertiesDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/UnityLayerOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_BearingFilter.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/MapManagerEditor.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_DirectionResource.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_TileCover.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeTileProviderOptionsDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ModelingSectionDrawer.cs" />
-    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Geocoder.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_GeoCoordinate.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/TerrainSideWallOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Tile.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/MaterialModifierEditor.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeAroundTransformTileProviderOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/FeatureSubLayerTreeView.cs" />
+    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntries.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/VectorLayerPropertiesDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_TileResource.cs" />
     <Compile Include="Assets/Blink/Art/Characters/LowPoly/Editor/MaterialTilingOffset.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/LayerModifierEditor.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/LayerPerformanceOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/FeatureSectionMultiColumnHeader.cs" />
+    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/LogEntry.cs" />
     <Compile Include="Assets/Mapbox/Core/cheap-ruler-cs/Tests/Editor/MapboxUnitTests_CheapRulerCs.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/LineGeometryOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/MapboxConfigurationWindow.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/StyleOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/GeometryExtrusionOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_PolylineUtils.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/VectorSubLayerTreeView.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/MapImageFactoryEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PointsOfInterestSubLayerTreeView.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ImageryLayerPropertiesDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ImageryRasterOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/Build/Mapbox_iOS_build.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ElevationRequiredOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Token.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_FileSource.cs" />
+    <Compile Include="Assets/Mapbox/Core/probe-extractor-cs/Tests/Editor/MapboxUnitTests_ProbeExtractorCs.cs" />
     <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/FileMonitor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/BehaviorModifiersSectionDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/FeatureTreeElement.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/FactoryEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ElevationLayerPropertiesDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/ScenesListEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/TreeElement.cs" />
+    <Compile Include="Assets/ThirdPartyAssets/WoLfulus/LineEnding/Editor/Enums.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapLocationOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapPlacementOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_VectorTile.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_BboxToGeoCoordinateBoundsConverter.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_TileJSON.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_PolylineToGeoCoordinateListConverter.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/EditorHelper.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/StyleSearchWindow.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_LonLatToGeoCoordinateConverter.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/GeocodeAttributeDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/PrefabItemOptionsDrawer.cs" />
@@ -140,28 +122,46 @@
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/StyleSearchAttributeDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/FeatureBehaviourEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/UnitTests/MapboxUnitTests_CircularBuffer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/PointsOfInterestSubLayerPropertiesDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/CameraBoundsTileProviderOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/VectorFilterOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_ForwardGeocodeResource.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Directions.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/ModifierStackEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/MergedModifierStackEditor.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/SpawnPrefabOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/AtlasTemplateGenerator.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/TreeModel.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PopupSelectionMenu.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/CoreVectorLayerPropertiesDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_Compression.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_SQLiteCache.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/TreeViewWithTreeModel.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/ScriptableCreatorWindow.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/GeocodeAttributeSearchWindow.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapExtentOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/AddMonoBehavioursModifierDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/TreeElementUtility.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/FeaturesSubLayerPropertiesDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MapScalingOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_MapMatcher.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ElevationModificationOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/TerrainColliderOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/UnityLayerOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_BearingFilter.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/MapManagerEditor.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_AngleSmoothing.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/LayerSourceOptionsDrawer.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_DirectionResource.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/ScriptablePaletteEditor.cs" />
+    <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_TileCover.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_CanonicalTileId.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/MaterialListDrawer.cs" />
     <Compile Include="Assets/Mapbox/Core/mapbox-sdk-cs/Tests/UnitTests/Editor/MapboxUnitTests_ReverseGeocodeResource.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/RangeTileProviderOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ColliderOptionsDrawer.cs" />
     <Compile Include="Assets/Mapbox/Unity/Editor/ClearFileCache.cs" />
+    <Compile Include="Assets/Mapbox/Unity/Editor/PropertyDrawers/ModelingSectionDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -516,6 +516,10 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.17f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Chaos.NaCl">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.VectorTile.Geometry">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
       <Private>False</Private>
@@ -532,12 +536,20 @@
       <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.Soar">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Dex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MapboxAccountsUnity">
@@ -548,8 +560,16 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="websocket-sharp-latest">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Wallet">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.Json">
@@ -560,12 +580,20 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.KeyStore">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.IO.Compression">
       <HintPath>Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.VectorTileReader">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Metaplex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
@@ -576,68 +604,40 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Dex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Extensions">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NativeWebSocket">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.KeyStore">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Chaos.NaCl">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+    <Reference Include="Avro">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Avro">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.SessionKeys">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Soar">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Solana.Unity.Programs">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Programs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="websocket-sharp-latest">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Extensions">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/BouncyCastle.Crypto.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Solana.Unity.Wallet">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
+    <Reference Include="Solana.Unity.SessionKeys">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NativeWebSocket">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Rpc">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Rpc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Metaplex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="nunit.framework">
@@ -1192,12 +1192,12 @@
       <HintPath>Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.XR.ARFoundation.Editor">
-      <HintPath>Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.Simulation">
       <HintPath>Library/ScriptAssemblies/Unity.XR.Simulation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.XR.ARFoundation.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.XR.ARAnalytics.Editor">
@@ -1356,13 +1356,13 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj" />
     <ProjectReference Include="UniTask.DOTween.csproj" />
-    <ProjectReference Include="UnityGifDecoder.csproj" />
     <ProjectReference Include="UniTask.TextMeshPro.csproj" />
-    <ProjectReference Include="UniTask.Addressables.csproj" />
     <ProjectReference Include="com.solana.unity_sdk.csproj" />
+    <ProjectReference Include="UniTask.Addressables.csproj" />
     <ProjectReference Include="UniTask.csproj" />
     <ProjectReference Include="Solana.Unity.SDK.Editor.csproj" />
     <ProjectReference Include="UniTask.Linq.csproj" />
+    <ProjectReference Include="UnityGifDecoder.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

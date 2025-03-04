@@ -44,6 +44,8 @@ public class SimulatedLocationProvider : AbstractLocationProvider
     {
         _latitude = lat;
         _longitude = lon;
+        UpdateLocation(); // Call UpdateLocation to send the update
+        Debug.Log($"Setting location to: ({lat}, {lon}) and triggering update.");
     }
 
     public void OnMapInitialized()

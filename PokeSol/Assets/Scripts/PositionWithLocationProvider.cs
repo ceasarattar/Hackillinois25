@@ -10,25 +10,14 @@ namespace Mapbox.Examples
 		[SerializeField]
 		private AbstractMap _map;
 
-		/// <summary>
-		/// The rate at which the transform's position tries catch up to the provided location.
-		/// </summary>
 		[SerializeField]
 		float _positionFollowFactor;
 
-		/// <summary>
-		/// Use a mock <see cref="T:Mapbox.Unity.Location.TransformLocationProvider"/>,
-		/// rather than a <see cref="T:Mapbox.Unity.Location.EditorLocationProvider"/>. 
-		/// </summary>
 		[SerializeField]
 		bool _useTransformLocationProvider;
 
 		bool _isInitialized;
 
-		/// <summary>
-		/// The location provider.
-		/// This is public so you change which concrete <see cref="T:Mapbox.Unity.Location.ILocationProvider"/> to use at runtime.
-		/// </summary>
 		ILocationProvider _locationProvider;
 		public ILocationProvider LocationProvider
 		{
@@ -47,7 +36,6 @@ namespace Mapbox.Examples
 				if (_locationProvider != null)
 				{
 					_locationProvider.OnLocationUpdated -= LocationProvider_OnLocationUpdated;
-
 				}
 				_locationProvider = value;
 				_locationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
@@ -60,6 +48,7 @@ namespace Mapbox.Examples
 		{
 			LocationProvider.OnLocationUpdated += LocationProvider_OnLocationUpdated;
 			_map.OnInitialized += () => _isInitialized = true;
+			Debug.Log("PositionWithLocationProvider started.");
 		}
 
 		void OnDestroy()
@@ -74,7 +63,9 @@ namespace Mapbox.Examples
 		{
 			if (_isInitialized && location.IsLocationUpdated)
 			{
+				Debug.Log($"Location received: {location.LatitudeLongitude}");
 				_targetPosition = _map.GeoToWorldPosition(location.LatitudeLongitude);
+				Debug.Log($"Location updated: {_targetPosition}");
 			}
 		}
 

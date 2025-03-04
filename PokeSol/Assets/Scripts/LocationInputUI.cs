@@ -1,20 +1,20 @@
 using UnityEngine;
-using TMPro; // For TextMeshPro components, including TMP_InputField
+using TMPro;
 
 public class LocationInputUI : MonoBehaviour
 {
     public SimulatedLocationProvider locationProvider;
-    public TMP_InputField latitudeInput; // Change from InputField to TMP_InputField
-    public TMP_InputField longitudeInput; // Change from InputField to TMP_InputField
+    public TMP_InputField latitudeInput;
+    public TMP_InputField longitudeInput;
+    public TMP_InputField walletAddressInput; // Added this line
     public TextMeshProUGUI feedbackText;
 
     private float initialLatitude = 40.7128f;
     private float initialLongitude = -74.0060f;
-    private float moveIncrement = 0.001f; // ~111 meters per degree
+    private float moveIncrement = 0.001f;
 
     void Start()
     {
-        // Initialize input fields with current coordinates
         if (locationProvider != null)
         {
             latitudeInput.text = locationProvider.Latitude.ToString();
@@ -23,19 +23,21 @@ public class LocationInputUI : MonoBehaviour
     }
 
     public void UpdateLocation()
+{
+    Debug.Log($"Latitude Input: {latitudeInput.text}, Longitude Input: {longitudeInput.text}");
+    if (float.TryParse(latitudeInput.text, out float lat) && float.TryParse(longitudeInput.text, out float lon))
     {
-        if (float.TryParse(latitudeInput.text, out float lat) && float.TryParse(longitudeInput.text, out float lon))
-        {
-            locationProvider.SetLocation(lat, lon);
-            feedbackText.text = $"Location set to: ({lat}, {lon})";
-            Debug.Log($"Location set to: ({lat}, {lon})");
-        }
-        else
-        {
-            feedbackText.text = "Invalid latitude or longitude input!";
-            Debug.LogWarning("Invalid latitude or longitude input!");
-        }
+        Debug.Log($"Parsed Latitude: {lat}, Parsed Longitude: {lon}");
+        locationProvider.SetLocation(lat, lon);
+        feedbackText.text = $"Location set to: ({lat}, {lon})";
+        Debug.Log($"Location set to: ({lat}, {lon})");
     }
+    else
+    {
+        feedbackText.text = "Invalid latitude or longitude input!";
+        Debug.LogWarning("Invalid latitude or longitude input!");
+    }
+}
 
     public void ResetLocation()
     {
@@ -78,6 +80,13 @@ public class LocationInputUI : MonoBehaviour
         feedbackText.text = $"Moved East to: ({newLat}, {newLon})";
         Debug.Log($"Moved East to: ({newLat}, {newLon})");
     }
+    public void ClearWalletAddressInput()
+{
+    if (walletAddressInput.text == "Enter your wallet address:")
+    {
+        walletAddressInput.text = "";
+    }
+}
 
     public void MoveWest()
     {
@@ -89,5 +98,12 @@ public class LocationInputUI : MonoBehaviour
         feedbackText.text = $"Moved West to: ({newLat}, {newLon})";
         Debug.Log($"Moved West to: ({newLat}, {newLon})");
     }
+
+    public void ClearWalletAddressInput(string walletAddress)
+    {
+        if (walletAddress == "Enter your wallet address:")
+        {
+            walletAddressInput.text = "";
+        }
+    }
 }
-//test

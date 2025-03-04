@@ -64,13 +64,19 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.17f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/ObjectToByte.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/Interfaces/IAdapterOperations.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ExtraLoginOptions.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/JsonRequest.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/TypeOfLogin.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ExtraLoginOptions.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/data/NFTProData.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/data/AccountLayout.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/MfaSettings.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Debug/Web3AuthDebug.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ShareMetadata.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Provider.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Metaplex/CandyMachine/CandyMachineCommands.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapter.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/Responses/AuthorizationResult.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/IWalletBase.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Web3Auth.cs" />
@@ -78,83 +84,77 @@
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapterWebGL/WalletAdapterButton.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/Interfaces/IMessageReceiver.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/WalletBase.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Web3AuthResponse.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/nft/nft_interfaces/iNftFile.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Mobile/WebGLInputMobile.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterWebSocket.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/HideIf/Editor/Utilities.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/data/AccountMeta.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/Crypto/ECDSASignatures.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapterWebGL/WalletAdapterScreen.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/SolanaMobileWalletAdapter.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/PhantomTransactionPayload.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Exporters/PrefabsExporter.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/data/MetaplexData.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Keystore/KeyStoreManagerUtils.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/SecurePlayerPrefs.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/MainThreadDispatcher.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Api/Models/StoreApiResponse.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/FileDownloader.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Utils.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ChainConfig.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Web3AuthError.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/Responses/SignedResult.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterSession.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/PhantomTransactionsPayload.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/PhantomMessagePayload.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Api/Models/LogoutApiRequest.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Curve.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/SolflareDeepLink.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SessionWallet.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Api/Web3AuthApi.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Detail/RebuildChecker.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Exporters/WebGLTemplatesExporter.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/Utils.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/MFALevel.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/Responses/Response.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Display.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ECPointArithmetic.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/Base58Encoding.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/UserInfo.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/PhantomDeepLink.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/LocalAssociationScenario.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Web3AuthWallet.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/LocalAssociationIntentCreator.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Metaplex/CandyMachine/CandyGuardMintSettings.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/UnityRateLimiter.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Wrapper/WrappedTMPInputField.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/ArrayHelpers.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/InGameWallet.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/nft/Nft.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpc20Client.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterClient.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/LoginConfigItem.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLWindow/WebGLWindow.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Web3.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/HideIf/HideIfAttribute.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/AssociationContract.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/WebGLInput.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/WebSocketsTransportContract.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/ObjectToByte.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/JsonRequest.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/MfaSettings.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Debug/Web3AuthDebug.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Metaplex/CandyMachine/CandyMachineCommands.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapter.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Web3AuthResponse.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Mobile/WebGLInputMobile.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterWebSocket.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/HideIf/Editor/Utilities.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapterWebGL/WalletAdapterScreen.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/SolanaMobileWalletAdapter.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/data/MetaplexData.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Keystore/KeyStoreManagerUtils.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Api/Models/StoreApiResponse.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/FileDownloader.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Utils.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Web3AuthError.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/Responses/SignedResult.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterSession.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Api/Models/LogoutApiRequest.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Curve.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/SolflareDeepLink.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Detail/RebuildChecker.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/MFALevel.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpcClient/Responses/Response.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/ECPointArithmetic.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/DeepLinkWallets/PhantomDeepLink.cs" />
-    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Web3AuthWallet.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Prompt.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/ArrayHelpers.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/HideIf/HideIfExampleScript.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Metaplex/CandyMachine/CandyGuardData.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/InGameWallet.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/Interfaces/IMessageSender.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Wrapper/IInputField.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/nft/Nft.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/JsonRpc20Client.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/Wrapper/WrappedInputField.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/utility/Clipboard.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/MobileWalletAdapterClient.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/Web3AuthOptions.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Web3AuthExceptions.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/AES256CBC.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/WhiteLabelData.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/LoginConfigItem.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLWindow/WebGLWindow.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaWalletAdapterWebGL/SolanaWalletAdapterWebGL.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/Web3.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/SessionResponse.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/HideIf/HideIfAttribute.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/AssociationContract.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/MfaSetting.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/WebGLSupport/WebGLInput/WebGLInput.cs" />
+    <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/codebase/SolanaMobileStack/WebSocketsTransportContract.cs" />
     <Compile Include="Assets/Solana.Unity-SDK-main/Runtime/Plugins/Web3AuthSDK/Types/LoginParams.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -512,6 +512,10 @@
       <HintPath>/Applications/Unity/Hub/Editor/2022.3.17f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Chaos.NaCl">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.VectorTile.Geometry">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.Geometry.dll</HintPath>
       <Private>False</Private>
@@ -528,12 +532,20 @@
       <HintPath>Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.Soar">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/unityplastic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Plastic.Antlr3.Runtime">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Dex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="MapboxAccountsUnity">
@@ -544,8 +556,16 @@
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="websocket-sharp-latest">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library/PackageCache/com.unity.collab-proxy@2.7.1/Lib/Editor/log4netPlastic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Wallet">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.Json">
@@ -556,12 +576,20 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Solana.Unity.KeyStore">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Mapbox.IO.Compression">
       <HintPath>Assets/Mapbox/Core/Plugins/ThirdParty/Mapbox.IO.Compression/net35/Mapbox.IO.Compression.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.VectorTileReader">
       <HintPath>Assets/Mapbox/Core/Plugins/Mapbox/vector-tile-cs/net46/Mapbox.VectorTile.VectorTileReader.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Metaplex">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Mapbox.VectorTile.ExtensionMethods">
@@ -572,68 +600,40 @@
       <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.VisualScripting.TextureAssets">
-      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Dex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Dex.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Extensions">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="NativeWebSocket">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.KeyStore">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.KeyStore.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Chaos.NaCl">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Chaos.NaCl.dll</HintPath>
+    <Reference Include="Avro">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Avro">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Avro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.SessionKeys">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Soar">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Soar.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Solana.Unity.Programs">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Programs.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="websocket-sharp-latest">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/websocket-sharp-latest.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.TextureAssets">
+      <HintPath>Library/PackageCache/com.unity.visualscripting@1.9.1/Editor/VisualScripting.Core/EditorAssetResources/Unity.VisualScripting.TextureAssets.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Solana.Unity.Extensions">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Extensions.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="BouncyCastle.Crypto">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/BouncyCastle.Crypto.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Solana.Unity.Wallet">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Wallet.dll</HintPath>
+    <Reference Include="Solana.Unity.SessionKeys">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.SessionKeys.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="NativeWebSocket">
+      <HintPath>Assets/Solana.Unity-SDK-main/Packages/NativeWebSocket.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Solana.Unity.Rpc">
       <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Rpc.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Solana.Unity.Metaplex">
-      <HintPath>Assets/Solana.Unity-SDK-main/Packages/Solana.Unity.Metaplex.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

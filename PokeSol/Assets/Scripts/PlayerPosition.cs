@@ -7,13 +7,14 @@ public class PlayerPosition : MonoBehaviour
     public AbstractMap map;
     private SimulatedLocationProvider locationProvider;
     private Vector3 targetPosition;
-    public float moveSpeed = 5f;
+    public float moveSpeed = 1f;
     public float rotationSpeed = 10f;
     private Vector2d lastLatLon;
     private Vector3 movementDirection;
 
-    // Variables for on-screen button input
     private Vector3 buttonInputDirection = Vector3.zero;
+    public float moveDistance = 1f; // Distance to move with each button press
+    private float currentMoveDistance = 0f; // Track distance moved
 
     void Start()
     {
@@ -39,18 +40,17 @@ public class PlayerPosition : MonoBehaviour
     {
         if (locationProvider == null || map == null) return;
 
-        HandleKeyboardInput();
+        HandleInput();
         MovePlayer();
     }
 
-    void HandleKeyboardInput()
+    void HandleInput()
     {
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
 
         movementDirection = new Vector3(moveX, 0, moveZ).normalized;
 
-        // If no keyboard input, check for button input
         if (movementDirection.magnitude == 0)
         {
             movementDirection = buttonInputDirection;
@@ -67,11 +67,22 @@ public class PlayerPosition : MonoBehaviour
     {
         if (movementDirection.magnitude > 0)
         {
-            transform.position += movementDirection * moveSpeed * Time.deltaTime;
+            float step = moveSpeed * Time.deltaTime;
+            Vector3 moveVector = movementDirection * step;
+            transform.position += moveVector;
+
+            if (buttonInputDirection != Vector3.zero) // If moving due to button press
+            {
+                currentMoveDistance += moveVector.magnitude;
+                if (currentMoveDistance >= moveDistance)
+                {
+                    buttonInputDirection = Vector3.zero; // Stop movement
+                    currentMoveDistance = 0f; // Reset distance tracker
+                }
+            }
         }
     }
 
-    // Functions to be called by UI buttons
     public void MoveUp() { buttonInputDirection = Vector3.forward; }
     public void MoveDown() { buttonInputDirection = Vector3.back; }
     public void MoveLeft() { buttonInputDirection = Vector3.left; }
