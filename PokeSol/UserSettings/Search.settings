@@ -8,6 +8,12 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
+	"last_search.310DEAF1" = "t:prefab"
+	"OpenInspectorPreview.310DEAF1" = "0"
+	"currentGroup.310DEAF1" = "scene"
+	"last_search.98D18836" = "t:prefab"
+	"OpenInspectorPreview.98D18836" = "0"
+	"currentGroup.98D18836" = "all"
 }
 providers = {
 	packages = {
